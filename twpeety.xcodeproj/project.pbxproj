@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		D1CD345F26208D5400C84978 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD345E26208D5400C84978 /* AppDelegate.swift */; };
 		D1CD346126208D5400C84978 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD346026208D5400C84978 /* SceneDelegate.swift */; };
-		D1CD346326208D5400C84978 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD346226208D5400C84978 /* ViewController.swift */; };
 		D1CD346626208D5400C84978 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1CD346426208D5400C84978 /* Main.storyboard */; };
-		D1CD346826208D5700C84978 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1CD346726208D5700C84978 /* Assets.xcassets */; };
 		D1CD346B26208D5700C84978 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1CD346926208D5700C84978 /* LaunchScreen.storyboard */; };
+		D1CD347C2620A55700C84978 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD347B2620A55700C84978 /* MainTabController.swift */; };
+		D1CD34802620AA0000C84978 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD347F2620AA0000C84978 /* FeedController.swift */; };
+		D1CD34832620AAAB00C84978 /* ExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD34822620AAAB00C84978 /* ExploreController.swift */; };
+		D1CD34862620AAC000C84978 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD34852620AAC000C84978 /* NotificationController.swift */; };
+		D1CD34892620AAE100C84978 /* ConversationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD34882620AAE100C84978 /* ConversationController.swift */; };
+		D1CD348D2620B92100C84978 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1CD348C2620B92100C84978 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D1CD345B26208D5400C84978 /* twpeety.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twpeety.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1CD345E26208D5400C84978 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1CD346026208D5400C84978 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D1CD346226208D5400C84978 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D1CD346526208D5400C84978 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D1CD346726208D5700C84978 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1CD346A26208D5700C84978 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1CD346C26208D5700C84978 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1CD347B2620A55700C84978 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		D1CD347F2620AA0000C84978 /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
+		D1CD34822620AAAB00C84978 /* ExploreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreController.swift; sourceTree = "<group>"; };
+		D1CD34852620AAC000C84978 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		D1CD34882620AAE100C84978 /* ConversationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationController.swift; sourceTree = "<group>"; };
+		D1CD348C2620B92100C84978 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,67 @@
 		D1CD345D26208D5400C84978 /* twpeety */ = {
 			isa = PBXGroup;
 			children = (
+				D1CD34782620A43800C84978 /* API */,
+				D1CD34772620A40700C84978 /* Model */,
+				D1CD34762620A3F900C84978 /* View */,
+				D1CD34752620A3F600C84978 /* ModelView */,
+				D1CD34742620A3F200C84978 /* Controller */,
+				D1CD34732620A3E300C84978 /* Utils */,
 				D1CD345E26208D5400C84978 /* AppDelegate.swift */,
 				D1CD346026208D5400C84978 /* SceneDelegate.swift */,
-				D1CD346226208D5400C84978 /* ViewController.swift */,
 				D1CD346426208D5400C84978 /* Main.storyboard */,
-				D1CD346726208D5700C84978 /* Assets.xcassets */,
 				D1CD346926208D5700C84978 /* LaunchScreen.storyboard */,
+				D1CD348C2620B92100C84978 /* Assets.xcassets */,
 				D1CD346C26208D5700C84978 /* Info.plist */,
 			);
 			path = twpeety;
+			sourceTree = "<group>";
+		};
+		D1CD34732620A3E300C84978 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D1CD34742620A3F200C84978 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D1CD347B2620A55700C84978 /* MainTabController.swift */,
+				D1CD347F2620AA0000C84978 /* FeedController.swift */,
+				D1CD34822620AAAB00C84978 /* ExploreController.swift */,
+				D1CD34852620AAC000C84978 /* NotificationController.swift */,
+				D1CD34882620AAE100C84978 /* ConversationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D1CD34752620A3F600C84978 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelView;
+			sourceTree = "<group>";
+		};
+		D1CD34762620A3F900C84978 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D1CD34772620A40700C84978 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D1CD34782620A43800C84978 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1CD346B26208D5700C84978 /* LaunchScreen.storyboard in Resources */,
-				D1CD346826208D5700C84978 /* Assets.xcassets in Resources */,
+				D1CD348D2620B92100C84978 /* Assets.xcassets in Resources */,
 				D1CD346626208D5400C84978 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,9 +197,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1CD346326208D5400C84978 /* ViewController.swift in Sources */,
+				D1CD34862620AAC000C84978 /* NotificationController.swift in Sources */,
 				D1CD345F26208D5400C84978 /* AppDelegate.swift in Sources */,
+				D1CD34832620AAAB00C84978 /* ExploreController.swift in Sources */,
 				D1CD346126208D5400C84978 /* SceneDelegate.swift in Sources */,
+				D1CD347C2620A55700C84978 /* MainTabController.swift in Sources */,
+				D1CD34892620AAE100C84978 /* ConversationController.swift in Sources */,
+				D1CD34802620AA0000C84978 /* FeedController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +353,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XRXPRG4CQ7;
 				INFOPLIST_FILE = twpeety/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +361,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "deep-pro.twpeety";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,6 +373,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XRXPRG4CQ7;
 				INFOPLIST_FILE = twpeety/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +381,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "deep-pro.twpeety";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
