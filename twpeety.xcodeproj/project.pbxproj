@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		D1A4B9EB26217FEC008AE5C0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4B9EA26217FEC008AE5C0 /* Extensions.swift */; };
+		D1A4BA032621B190008AE5C0 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4BA022621B190008AE5C0 /* LoginController.swift */; };
+		D1A4BA062621B39D008AE5C0 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4BA052621B39D008AE5C0 /* RegistrationController.swift */; };
+		D1A4BA092622015E008AE5C0 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4BA082622015E008AE5C0 /* Utilities.swift */; };
 		D1CD345F26208D5400C84978 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD345E26208D5400C84978 /* AppDelegate.swift */; };
 		D1CD346126208D5400C84978 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD346026208D5400C84978 /* SceneDelegate.swift */; };
 		D1CD346626208D5400C84978 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1CD346426208D5400C84978 /* Main.storyboard */; };
@@ -22,6 +25,9 @@
 
 /* Begin PBXFileReference section */
 		D1A4B9EA26217FEC008AE5C0 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D1A4BA022621B190008AE5C0 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		D1A4BA052621B39D008AE5C0 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		D1A4BA082622015E008AE5C0 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		D1CD345B26208D5400C84978 /* twpeety.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twpeety.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1CD345E26208D5400C84978 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1CD346026208D5400C84978 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D1A4BA012621B169008AE5C0 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				D1A4BA022621B190008AE5C0 /* LoginController.swift */,
+				D1A4BA052621B39D008AE5C0 /* RegistrationController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		D1CD345226208D5300C84978 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				D1A4B9EA26217FEC008AE5C0 /* Extensions.swift */,
+				D1A4BA082622015E008AE5C0 /* Utilities.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -93,6 +109,7 @@
 		D1CD34742620A3F200C84978 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D1A4BA012621B169008AE5C0 /* Authentication */,
 				D1CD347B2620A55700C84978 /* MainTabController.swift */,
 				D1CD347F2620AA0000C84978 /* FeedController.swift */,
 				D1CD34822620AAAB00C84978 /* ExploreController.swift */,
@@ -202,11 +219,14 @@
 			files = (
 				D1CD34862620AAC000C84978 /* NotificationController.swift in Sources */,
 				D1CD345F26208D5400C84978 /* AppDelegate.swift in Sources */,
+				D1A4BA092622015E008AE5C0 /* Utilities.swift in Sources */,
 				D1CD34832620AAAB00C84978 /* ExploreController.swift in Sources */,
 				D1A4B9EB26217FEC008AE5C0 /* Extensions.swift in Sources */,
+				D1A4BA032621B190008AE5C0 /* LoginController.swift in Sources */,
 				D1CD346126208D5400C84978 /* SceneDelegate.swift in Sources */,
 				D1CD347C2620A55700C84978 /* MainTabController.swift in Sources */,
 				D1CD34892620AAE100C84978 /* ConversationController.swift in Sources */,
+				D1A4BA062621B39D008AE5C0 /* RegistrationController.swift in Sources */,
 				D1CD34802620AA0000C84978 /* FeedController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
