@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D1A4B9EB26217FEC008AE5C0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4B9EA26217FEC008AE5C0 /* Extensions.swift */; };
 		D1CD345F26208D5400C84978 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD345E26208D5400C84978 /* AppDelegate.swift */; };
 		D1CD346126208D5400C84978 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD346026208D5400C84978 /* SceneDelegate.swift */; };
 		D1CD346626208D5400C84978 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1CD346426208D5400C84978 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D1A4B9EA26217FEC008AE5C0 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D1CD345B26208D5400C84978 /* twpeety.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twpeety.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1CD345E26208D5400C84978 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1CD346026208D5400C84978 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		D1CD34732620A3E300C84978 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D1A4B9EA26217FEC008AE5C0 /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				D1CD34862620AAC000C84978 /* NotificationController.swift in Sources */,
 				D1CD345F26208D5400C84978 /* AppDelegate.swift in Sources */,
 				D1CD34832620AAAB00C84978 /* ExploreController.swift in Sources */,
+				D1A4B9EB26217FEC008AE5C0 /* Extensions.swift in Sources */,
 				D1CD346126208D5400C84978 /* SceneDelegate.swift in Sources */,
 				D1CD347C2620A55700C84978 /* MainTabController.swift in Sources */,
 				D1CD34892620AAE100C84978 /* ConversationController.swift in Sources */,
