@@ -55,6 +55,12 @@ class LoginController: UIViewController {
         return button
     }()
     
+    private let dontHaveAnAccountButton: UIButton = {
+        let button = Utilities().attributedButton("Don't have an account", secondPart: " Sign Up?")
+        button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
+        return button
+    }()
+    
     // MARK: -  LifeCycle
     
     override func viewDidLoad() {
@@ -64,8 +70,14 @@ class LoginController: UIViewController {
 
     }
     // MARK: -  Selector
+    @objc func handleShowSignUp() {
+        print("Sign up")
+    }
+    
     @objc func handleLogin() {
-        print("how are you")
+        let controller = RegistrationController()
+        navigationController?.pushViewController(controller, animated: true)
+        
     }
     
 
@@ -85,6 +97,10 @@ class LoginController: UIViewController {
         
         view.addSubview(stack)
         stack.anchor(top: logoImageView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingLeft: 32, paddingRight: 32)
+        
+        view.addSubview(dontHaveAnAccountButton)
+        dontHaveAnAccountButton.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingLeft: 40, paddingRight: 40)
+        
     }
 
 }
