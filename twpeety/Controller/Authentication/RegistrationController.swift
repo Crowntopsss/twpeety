@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegistrationController: UIViewController {
+class RegistrationController: UIViewController, UINavigationControllerDelegate {
 
     // MARK: - Properties
     private let imagePicker = UIImagePickerController()
@@ -115,6 +115,9 @@ class RegistrationController: UIViewController {
         view.backgroundColor = .twitterBlue
         navigationController?.navigationBar.isHidden = true
         
+        imagePicker.delegate = self
+        imagePicker.allowsEditing =  true
+        
         view.addSubview(plusPhotoButton)
         plusPhotoButton.centerX(inView: view, topAnchor: view.safeAreaLayoutGuide.topAnchor, paddingTop: 32)
         plusPhotoButton.setDimensions(width: 140, height: 140)
@@ -132,5 +135,23 @@ class RegistrationController: UIViewController {
         
     }
 
+}
 
+// MARK: - UIImagePickerControllerDelegate
+
+extension RegistrationController: UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let profileImage = info[.editedImage] as? UIImage else {return}
+        self.plusPhotoButton.setImage(profileImage.withRenderingMode(.alwaysOriginal), for: .normal)
+        
+        plusPhotoButton.layer.cornerRadius = 140/2
+        plusPhotoButton.layer.masksToBounds = true
+        plusPhotoButton.imageView?.contentMode = .scaleAspectFill
+        plusPhotoButton.imageView?.clipsToBounds = true
+        plusPhotoButton.layer.borderColor = UIColor.white.cgColor
+        plusPhotoButton.layer.borderWidth = 3
+        
+        
+        dismiss(animated: true, completion: nil)
+    }
 }
