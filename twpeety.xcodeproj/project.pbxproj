@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		7B36547E9D76F30694BE0BB1 /* Pods_twpeety.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEAD2F3CC74268E095278D09 /* Pods_twpeety.framework */; };
+		D161059326260182004EB6BC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D161059226260182004EB6BC /* Constants.swift */; };
+		D161059626264161004EB6BC /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D161059526264161004EB6BC /* AuthService.swift */; };
 		D1704EE02623837F003B4C19 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D1704EDF2623837E003B4C19 /* GoogleService-Info.plist */; };
 		D1A4B9EB26217FEC008AE5C0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4B9EA26217FEC008AE5C0 /* Extensions.swift */; };
 		D1A4BA032621B190008AE5C0 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4BA022621B190008AE5C0 /* LoginController.swift */; };
@@ -29,6 +31,8 @@
 		16E83738E4D9ABC217B2A6B8 /* Pods-twpeety.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twpeety.debug.xcconfig"; path = "Target Support Files/Pods-twpeety/Pods-twpeety.debug.xcconfig"; sourceTree = "<group>"; };
 		4A92BFD769497EFC042A1151 /* Pods-twpeety.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twpeety.release.xcconfig"; path = "Target Support Files/Pods-twpeety/Pods-twpeety.release.xcconfig"; sourceTree = "<group>"; };
 		AEAD2F3CC74268E095278D09 /* Pods_twpeety.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_twpeety.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D161059226260182004EB6BC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D161059526264161004EB6BC /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		D1704EDF2623837E003B4C19 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D1A4B9EA26217FEC008AE5C0 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D1A4BA022621B190008AE5C0 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 			children = (
 				D1A4B9EA26217FEC008AE5C0 /* Extensions.swift */,
 				D1A4BA082622015E008AE5C0 /* Utilities.swift */,
+				D161059226260182004EB6BC /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 		D1CD34782620A43800C84978 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				D161059526264161004EB6BC /* AuthService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -171,7 +177,6 @@
 				16E83738E4D9ABC217B2A6B8 /* Pods-twpeety.debug.xcconfig */,
 				4A92BFD769497EFC042A1151 /* Pods-twpeety.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -296,11 +301,13 @@
 				D1CD34832620AAAB00C84978 /* ExploreController.swift in Sources */,
 				D1A4B9EB26217FEC008AE5C0 /* Extensions.swift in Sources */,
 				D1A4BA032621B190008AE5C0 /* LoginController.swift in Sources */,
+				D161059626264161004EB6BC /* AuthService.swift in Sources */,
 				D1CD346126208D5400C84978 /* SceneDelegate.swift in Sources */,
 				D1CD347C2620A55700C84978 /* MainTabController.swift in Sources */,
 				D1CD34892620AAE100C84978 /* ConversationController.swift in Sources */,
 				D1A4BA062621B39D008AE5C0 /* RegistrationController.swift in Sources */,
 				D1CD34802620AA0000C84978 /* FeedController.swift in Sources */,
+				D161059326260182004EB6BC /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

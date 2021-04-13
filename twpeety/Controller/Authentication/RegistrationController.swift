@@ -116,21 +116,11 @@ class RegistrationController: UIViewController, UINavigationControllerDelegate {
         guard let password = passwordTextField.text else {return}
         guard let fullname = fullnameTextField.text else {return}
         guard let username = usernameTextField.text else {return}
-
-        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
-            if let error = error {
-                print(error.localizedDescription)
-                return
-            } else{
-                guard let uid = result?.user.uid else {return}
-                let values = ["email":email, "username":username, "fullname":fullname]
-                
-                Database.database().reference().child("users").child(uid).updateChildValues(values) { (error, ref) in
-                    print("Succesfully added to the database")
-                }
-            
-            }
+        guard let imageData = profileImage.jpegData(compressionQuality: 0.3) else {
+            return
         }
+        
+        
     }
     
 
