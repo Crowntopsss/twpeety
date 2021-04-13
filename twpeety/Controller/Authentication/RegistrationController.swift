@@ -107,8 +107,9 @@ class RegistrationController: UIViewController, UINavigationControllerDelegate {
         navigationController?.popViewController(animated: true)
     }
     @objc func signUp() {
+        
         guard let profileImage = profileImage else {
-            print("Select a profile image")
+            print("please selct a profile image")
             return
         }
         guard let email =  emailTextField.text else {return}
@@ -123,7 +124,11 @@ class RegistrationController: UIViewController, UINavigationControllerDelegate {
             } else{
                 guard let uid = result?.user.uid else {return}
                 let values = ["email":email, "username":username, "fullname":fullname]
-                Database
+                
+                Database.database().reference().child("users").child(uid).updateChildValues(values) { (error, ref) in
+                    print("Succesfully added to the database")
+                }
+            
             }
         }
     }
