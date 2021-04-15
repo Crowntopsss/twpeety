@@ -32,7 +32,8 @@ class MainTabController: UITabBarController {
         super.viewDidLoad()
         view.backgroundColor = .twitterBlue
         authenticateUsersAndConfigure()
-        logUserOut()
+//        logUserOut()
+        
     }
     
     // MARK: - API
@@ -47,14 +48,18 @@ class MainTabController: UITabBarController {
         }else{
             configureViewController()
             configureUI()
+            fetchUser()
         }
+    }
+    func fetchUser() {
+        UserService.shared.fetchUsers()
     }
     
     func logUserOut(){
         do{
             try Auth.auth().signOut()
             print("log user out")
-        }catch _ {
+        }catch let error {
             print("Failed to sign out")
         }
     }
