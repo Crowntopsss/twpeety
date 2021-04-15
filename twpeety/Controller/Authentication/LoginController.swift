@@ -35,6 +35,8 @@ class LoginController: UIViewController {
     
     private let emailTextField: UITextField = {
         let tf = Utilities().textField(withPlaceholder: "Email")
+        tf.autocapitalizationType = .none
+        tf.autocorrectionType = .no
         return tf
     }()
     
@@ -71,13 +73,25 @@ class LoginController: UIViewController {
     }
     // MARK: -  Selector
     @objc func handleShowSignUp() {
-        print("Sign up")
+        let controller = RegistrationController()
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     @objc func handleLogin() {
-        let controller = RegistrationController()
-        navigationController?.pushViewController(controller, animated: true)
-        
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+
+        AuthService.shared.logUserIn(withEmail: email, password: password) { (result, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            guard let window = UIApplication.shared.windows.first(where: {$0.isKeyWindow}) else { return}
+            guard let tab = window.rootViewController as? MainTabController else {return}
+            tab.authenticateUsersAndConfigure()
+            self.dismiss(animated: true, completion: nil)
+            
+        }
     }
     
 

@@ -116,11 +116,15 @@ class RegistrationController: UIViewController, UINavigationControllerDelegate {
         guard let password = passwordTextField.text else {return}
         guard let fullname = fullnameTextField.text else {return}
         guard let username = usernameTextField.text else {return}
-        guard let imageData = profileImage.jpegData(compressionQuality: 0.3) else {
-            return
+
+        let credentials = AuthCredentials(email: email, password: password, fullname: fullname, username: username, profileImage: profileImage)
+        
+        AuthService.shared.registerUser(credentials: credentials) { (error, ref) in
+            guard let window = UIApplication.shared.windows.first(where: {$0.isKeyWindow}) else { return}
+            guard let tab = window.rootViewController as? MainTabController else {return}
+            tab.authenticateUsersAndConfigure()
+            self.dismiss(animated: true, completion: nil)
         }
-        
-        
     }
     
 
