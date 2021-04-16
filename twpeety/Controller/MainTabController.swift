@@ -13,7 +13,10 @@ class MainTabController: UITabBarController {
     // MARK: - Properties
     var user : User?{
         didSet{
-            print("Yo")
+            guard let nav = viewControllers?[0] as? UINavigationController else {return}
+            guard let feed = nav.viewControllers.first as? FeedController else {return}
+            
+            feed.user = user
         }
     
     }
@@ -29,7 +32,9 @@ class MainTabController: UITabBarController {
     
     // MARK: - Selectors
     @objc func actionButtonTapped() {
-        print(123)
+        let nav = UINavigationController(rootViewController: UploadTweetController())
+        nav.modalPresentationStyle = .fullScreen
+        present(nav, animated: true, completion: nil)
     }
     
     
