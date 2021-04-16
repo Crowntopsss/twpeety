@@ -10,6 +10,12 @@ import UIKit
 class FeedController: UIViewController {
 
     // MARK: - Properties
+    var user : User? {
+        didSet{
+            print("Yo")
+        }
+    
+    }
     
     // MARK: -  LifeCycle
 

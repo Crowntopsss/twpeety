@@ -11,6 +11,13 @@ import Firebase
 class MainTabController: UITabBarController {
     
     // MARK: - Properties
+    var user : User?{
+        didSet{
+            print("Yo")
+        }
+    
+    }
+    
     let actionButton: UIButton = {
         let button = UIButton(type: .system)
         button.tintColor = .white
@@ -52,8 +59,11 @@ class MainTabController: UITabBarController {
         }
     }
     func fetchUser() {
-        UserService.shared.fetchUsers()
+        UserService.shared.fetchUsers { user in
+            self.user = user
+        }
     }
+    
     
     func logUserOut(){
         do{
