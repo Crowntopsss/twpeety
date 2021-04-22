@@ -23,10 +23,17 @@ struct TweetService {
         
         REF_TWEETS.observe(.childAdded) { snapshot in
             guard let dictionary = snapshot.value as? [String: AnyObject] else {return}
+            guard let uid = dictionary["uid"] as? String else {return}
             let tweetID = snapshot.key
-            let tweet = Tweet(tweetID: tweetID, dictionary: dictionary)
-            tweets.append(tweet)
-            completion(tweets)
+            
+            
+            UserService.shared.fetchUsers(uid: uid) { user in
+                let tweet = Tweet(user: user, tweetID: tweetID, dictionary: dictionary)
+                tweets.append(tweet)
+                tweets = tweets.reversed()
+                completion(tweets)
+            }
+
         }
     }
 }
