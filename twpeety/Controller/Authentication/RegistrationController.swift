@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import NVActivityIndicatorView
 
 class RegistrationController: UIViewController, UINavigationControllerDelegate {
 
@@ -108,6 +109,11 @@ class RegistrationController: UIViewController, UINavigationControllerDelegate {
     }
     @objc func signUp() {
         
+        let loading = NVActivityIndicatorView(frame: .zero, type: .ballPulse, color: .white, padding: 0)
+        loading.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(loading)
+        NSLayoutConstraint.activate([loading.widthAnchor.constraint(equalToConstant: 40), loading.heightAnchor.constraint(equalToConstant: 40),loading.centerYAnchor.constraint(equalTo: view.centerYAnchor),loading.centerXAnchor.constraint(equalTo: view.centerXAnchor)])
+        
         guard let profileImage = profileImage else {
             print("please selct a profile image")
             return
@@ -119,12 +125,20 @@ class RegistrationController: UIViewController, UINavigationControllerDelegate {
 
         let credentials = AuthCredentials(email: email, password: password, fullname: fullname, username: username, profileImage: profileImage)
         
-        AuthService.shared.registerUser(credentials: credentials) { (error, ref) in
-            guard let window = UIApplication.shared.windows.first(where: {$0.isKeyWindow}) else { return}
-            guard let tab = window.rootViewController as? MainTabController else {return}
-            tab.authenticateUsersAndConfigure()
-            self.dismiss(animated: true, completion: nil)
+        
+        DispatchQueue.main.async {
+            loading.startAnimating()
+            AuthService.shared.registerUser(credentials: credentials) { (error, ref) in
+                
+                guard let window = UIApplication.shared.windows.first(where: {$0.isKeyWindow}) else { return}
+                guard let tab = window.rootViewController as? MainTabController else {return}
+                tab.authenticateUsersAndConfigure()
+                self.dismiss(animated: true, completion: nil)
+                
+            }
         }
+        
+
     }
     
 
