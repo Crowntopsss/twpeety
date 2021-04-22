@@ -25,7 +25,7 @@ struct AuthService {
         Auth.auth().signIn(withEmail: email, password: password, completion: completion)
     }
     
-    func registerUser(credentials: AuthCredentials, complition: @escaping(Error?, DatabaseReference) -> Void) {
+    func registerUser(credentials: AuthCredentials, completion: @escaping(Error?, DatabaseReference) -> Void) {
         let email = credentials.email
         let password = credentials.password
         let username = credentials.username
@@ -53,7 +53,7 @@ struct AuthService {
                                   "fullname": fullname,
                                   "profileImageUrl": profileImageUrl]
                     
-                    REF_USERS.child(uid).updateChildValues(values, withCompletionBlock: complition)
+                    REF_USERS.child(uid).updateChildValues(values, withCompletionBlock: completion)
                 }
             }
         }
