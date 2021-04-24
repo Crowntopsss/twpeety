@@ -30,7 +30,6 @@ struct TweetService {
             UserService.shared.fetchUsers(uid: uid) { user in
                 let tweet = Tweet(user: user, tweetID: tweetID, dictionary: dictionary)
                 tweets.append(tweet)
-                tweets = tweets.reversed()
                 completion(tweets)
             }
 
