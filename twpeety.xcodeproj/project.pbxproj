@@ -36,6 +36,8 @@
 		D1CD34862620AAC000C84978 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD34852620AAC000C84978 /* NotificationController.swift */; };
 		D1CD34892620AAE100C84978 /* ConversationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD34882620AAE100C84978 /* ConversationController.swift */; };
 		D1CD348D2620B92100C84978 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1CD348C2620B92100C84978 /* Assets.xcassets */; };
+		D1EBEEE92634B24900A29E20 /* ProfileFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EBEEE82634B24900A29E20 /* ProfileFilterView.swift */; };
+		D1EBEEEC2634C3C700A29E20 /* ProfileFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EBEEEB2634C3C700A29E20 /* ProfileFilterCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,8 @@
 		D1CD34852620AAC000C84978 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		D1CD34882620AAE100C84978 /* ConversationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationController.swift; sourceTree = "<group>"; };
 		D1CD348C2620B92100C84978 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D1EBEEE82634B24900A29E20 /* ProfileFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilterView.swift; sourceTree = "<group>"; };
+		D1EBEEEB2634C3C700A29E20 /* ProfileFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilterCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +185,8 @@
 				D16B5384262ADA84008EEE09 /* CaptionTextField.swift */,
 				D177DE92263042F00071467E /* TweetCell.swift */,
 				D1A3A8A326341F6000FB732B /* ProfileHeader.swift */,
+				D1EBEEE82634B24900A29E20 /* ProfileFilterView.swift */,
+				D1EBEEEB2634C3C700A29E20 /* ProfileFilterCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -332,6 +338,7 @@
 				D1180D6626286A910079D7BE /* UserService.swift in Sources */,
 				D1CD34862620AAC000C84978 /* NotificationController.swift in Sources */,
 				D1CD345F26208D5400C84978 /* AppDelegate.swift in Sources */,
+				D1EBEEEC2634C3C700A29E20 /* ProfileFilterCell.swift in Sources */,
 				D16B5385262ADA84008EEE09 /* CaptionTextField.swift in Sources */,
 				D1A4BA092622015E008AE5C0 /* Utilities.swift in Sources */,
 				D1CD34832620AAAB00C84978 /* ExploreController.swift in Sources */,
@@ -349,6 +356,7 @@
 				D177DE96263167A50071467E /* TweetViewModel.swift in Sources */,
 				D1A4BA062621B39D008AE5C0 /* RegistrationController.swift in Sources */,
 				D1CD34802620AA0000C84978 /* FeedController.swift in Sources */,
+				D1EBEEE92634B24900A29E20 /* ProfileFilterView.swift in Sources */,
 				D161059326260182004EB6BC /* Constants.swift in Sources */,
 				D16B538D262B148C008EEE09 /* Tweet.swift in Sources */,
 				D16B538A262AFC3B008EEE09 /* TweetService.swift in Sources */,
