@@ -35,6 +35,9 @@ class ProfileFilterView: UIView {
         super.init(frame: frame)
         
         collectionView.register(ProfileFilterCell.self, forCellWithReuseIdentifier: reuseidentifier)
+        let selectedIndexPath = IndexPath(row: 0, section: 0)
+        collectionView.selectItem(at: selectedIndexPath, animated: true, scrollPosition: .left)
+        
         addSubview(collectionView)
         collectionView.addConstraintsToFillView(self)
         
@@ -56,11 +59,14 @@ class ProfileFilterView: UIView {
 
 extension ProfileFilterView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return ProfileFilterOption.allCases.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: reuseidentifier, for: indexPath) as! ProfileFilterCell
+        
+        let option = ProfileFilterOption(rawValue: indexPath.row)
+        cell.option = option 
         return cell
     }
     

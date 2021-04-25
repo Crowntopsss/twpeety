@@ -38,6 +38,7 @@
 		D1CD348D2620B92100C84978 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1CD348C2620B92100C84978 /* Assets.xcassets */; };
 		D1EBEEE92634B24900A29E20 /* ProfileFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EBEEE82634B24900A29E20 /* ProfileFilterView.swift */; };
 		D1EBEEEC2634C3C700A29E20 /* ProfileFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EBEEEB2634C3C700A29E20 /* ProfileFilterCell.swift */; };
+		D1EBEEEF2635A4D700A29E20 /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EBEEEE2635A4D700A29E20 /* ProfileHeaderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		D1CD348C2620B92100C84978 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1EBEEE82634B24900A29E20 /* ProfileFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilterView.swift; sourceTree = "<group>"; };
 		D1EBEEEB2634C3C700A29E20 /* ProfileFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilterCell.swift; sourceTree = "<group>"; };
+		D1EBEEEE2635A4D700A29E20 /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				D177DE95263167A50071467E /* TweetViewModel.swift */,
+				D1EBEEEE2635A4D700A29E20 /* ProfileHeaderViewModel.swift */,
 			);
 			path = ModelView;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				D177DE93263042F00071467E /* TweetCell.swift in Sources */,
 				D1A4BA032621B190008AE5C0 /* LoginController.swift in Sources */,
 				D161059626264161004EB6BC /* AuthService.swift in Sources */,
+				D1EBEEEF2635A4D700A29E20 /* ProfileHeaderViewModel.swift in Sources */,
 				D183A78E262A08FB00671A94 /* UploadTweetController.swift in Sources */,
 				D1180D792628902A0079D7BE /* User.swift in Sources */,
 				D1CD346126208D5400C84978 /* SceneDelegate.swift in Sources */,
