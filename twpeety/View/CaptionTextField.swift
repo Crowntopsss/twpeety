@@ -22,10 +22,16 @@ class CaptionTextField: UITextView {
     // MARK: = LifeCycle
     override init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame,  textContainer: textContainer)
+        
+        
+        layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
+        layer.borderWidth = 1.0
+
         backgroundColor = .white
         font = UIFont.systemFont(ofSize: 16)
         isScrollEnabled = false
-        heightAnchor.constraint(equalToConstant: 300).isActive = true
+        translatesAutoresizingMaskIntoConstraints = true
+        self.sizeToFit()
 
         addSubview(placeholderLabel)
         placeholderLabel.anchor(top: topAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 4)
