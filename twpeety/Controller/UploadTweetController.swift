@@ -79,6 +79,7 @@ class UploadTweetController: UIViewController {
 
     // MARK: - Helpers
     func configureUI() {
+        
         view.backgroundColor = .white
         configureNavigationBar()
         
@@ -86,7 +87,7 @@ class UploadTweetController: UIViewController {
         profileImageView.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, paddingTop: 16, paddingLeft: 16)
         
         view.addSubview(captionTextView)
-        captionTextView.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: profileImageView.rightAnchor, right: view.safeAreaLayoutGuide.rightAnchor, paddingTop: 16, paddingLeft: 16, paddingRight: 16)
+        captionTextView.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: profileImageView.rightAnchor, right: view.safeAreaLayoutGuide.rightAnchor, paddingTop: 16, paddingLeft: 16, paddingRight: 16, height: 120)
         
         profileImageView.sd_setImage(with: user.profileImageUrl, completed: nil)
     }

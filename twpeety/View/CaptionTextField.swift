@@ -29,8 +29,8 @@ class CaptionTextField: UITextView {
 
         backgroundColor = .white
         font = UIFont.systemFont(ofSize: 16)
-        isScrollEnabled = false
-        translatesAutoresizingMaskIntoConstraints = true
+        isScrollEnabled = true
+        translatesAutoresizingMaskIntoConstraints = false
         self.sizeToFit()
 
         addSubview(placeholderLabel)
