@@ -11,6 +11,10 @@ class UserCell: UITableViewCell {
 
     // MARK: - Properties
     
+    var user: User? {
+        didSet { configure() }
+    }
+    
     
     private lazy var profileImageView: UIImageView = {
         let iv = UIImageView()
@@ -63,6 +67,15 @@ class UserCell: UITableViewCell {
         addSubview(stack)
         stack.centerY(inView: profileImageView, leftAnchor: profileImageView.rightAnchor, paddingLeft: 12)
         
+    }
+    
+    // MARK: - Helpers
+    
+    func configure() {
+        guard let user = user else { return }
+        profileImageView.sd_setImage(with: user.profileImageUrl, completed: nil)
+        usernameLabel.text = user.username
+        fullnameLabel.text = user.fullname
     }
 
 }
