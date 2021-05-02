@@ -13,7 +13,7 @@ private let headerIdentifier = "ProfileHeader"
 class ProfileController: UICollectionViewController {
     
     // MARK: - Properties
-    private let user : User
+    private var user : User
     
     private var tweets = [Tweet](){
         didSet {collectionView.reloadData()}
@@ -112,11 +112,22 @@ extension ProfileController: UICollectionViewDelegateFlowLayout {
 
 extension ProfileController: ProfileHeaderDelegate {
     func handleEditProfileFollow(_ header: ProfileHeader) {
-        UserService.shared.followUser(uid: user.uid) { (ref, err) in
-            
-        }
         
+        
+        if user.isFollowed {
+            UserService.shared.unfollowUser(uid: user.uid) { (err, ref) in
+                self.user.isFollowed = false
+                print("follo")
+            }
+        }else {
+            UserService.shared.followUser(uid: user.uid) { (err, ref) in
+                self.user.isFollowed = true
+                print("not doe")
+            }
+        }
     }
+    
+
     
     func handleDismissal() {
         navigationController?.popViewController(animated: true)
