@@ -20,6 +20,8 @@ class Utilities {
         
         view.addSubview(textField)
         textField.anchor(left: iv.rightAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingLeft: 8, paddingBottom: 8)
+        textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
         
         let dividerView = UIView()
         dividerView.backgroundColor = .white

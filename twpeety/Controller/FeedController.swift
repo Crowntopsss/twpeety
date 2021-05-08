@@ -37,12 +37,14 @@ class FeedController: UICollectionViewController {
 
         // needed to clear the text in the back navigation:
         self.navigationItem.title = " "
-        navigationController?.navigationBar.barStyle = .black
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = false
+        navigationController?.navigationBar.barTintColor = .white
+        navigationController?.navigationBar.isTranslucent = false
 
     }
     // MARK: API
